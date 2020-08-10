@@ -1,0 +1,1 @@
+cd wkfront && dotnet run
