@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Categorias";
+}
+
+<div class="text-center">
+    <h1 class="display- mb-3">Editar categoria</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="container">
+                @using (Html.BeginForm("EditCategory", "Category", FormMethod.Post)) { 
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="productTitle">Nome</label>
+                                <input type="text" class="form-control" id="productTitle" name="title" value="@ViewBag.Categories.title" placeholder="Edite o nome da categoria :)">
+                                <input class="d-none" name="id" value="@ViewBag.Categories.id" />
+                            </div>
+                        </div>
+                        <input type="submit" class="btn btn-info btn-block" value="Salvar">
+
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

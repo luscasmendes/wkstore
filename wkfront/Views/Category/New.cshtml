@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Categorias";
+}
+
+<div class="text-center">
+    <h1 class="display- mb-3">Criando uma nova categoria</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="container">
+                @using (Html.BeginForm("CreateCategory", "Category", FormMethod.Post)) { 
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="categoryTitle" name="title" value="" placeholder="Dê um nome para a categoria :)">
+                            </div>
+                        </div>
+                        <input type="submit" class="btn btn-info btn-block" value="Adicionar categoria">
+
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
